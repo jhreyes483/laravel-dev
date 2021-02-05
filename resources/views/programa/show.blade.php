@@ -18,7 +18,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
 
-        
+
     <!-- sidebar -->
 @include('layouts.admin.components.sidebar')
 
@@ -34,7 +34,7 @@
     <!-- Main content -->
     <section class="content">
 
-        <h3 style="padding: 15px; background-color: #0d6aad; color: #ffffff; margin-bottom: 5%;">BIENVENIDO - {{ session('USER')->name_user }} </h3>
+        @include('layouts.admin.components.session')
 
 
 
@@ -52,7 +52,7 @@
 
             <div class="table-responsive">
                 <table id="example" class="table table-striped" >
-                  
+
                     <tbody class="table-light">
                         <tr>
                             <th class="bg-primary text-white" >ID</th>
@@ -66,7 +66,7 @@
                             <th class="bg-primary text-white">Acronimo</th>
                             <td>{{ $programa->acronimo }}</td>
                         </tr>
-                    
+
                         <tr>
                             <th class="bg-primary text-white">Estado</th>
                             <td>{{ $est[ $programa->estado ] }}</td>
@@ -76,7 +76,7 @@
                             <th class="bg-primary text-white">Fecha</th>
                             <td>{{ $programa->created_at }}</td>
                         </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
@@ -91,7 +91,7 @@
     <!-- footer -->
     @include('layouts.admin.components.footer')
 </div>
-    
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -126,7 +126,7 @@
                   scrollY: 400,
                   lengthMenu: [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ]
     });
-} 
+}
 );
 </script>
 
@@ -136,4 +136,3 @@
 </html>
 
 
-   
