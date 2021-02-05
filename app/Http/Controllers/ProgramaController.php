@@ -22,13 +22,11 @@ class ProgramaController extends Controller
     }
 
     //GET
-    public function create(Request $request ){
-        $est =  $this->est;
-       // Controller::ver($doc,0,1);
-       return redirect()->route('programa.index')->with([
-        'message'=>'se a creado un nuevo registro',
-        'type'=>'success'
-    ]);
+    public function create(Request $request )
+    {
+        $est = $this->est;
+        // Controller::ver($doc,0,1);
+        return view('programa.create',compact('est'));
     }
 
     public function store(Request $request){
