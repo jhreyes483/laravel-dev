@@ -28,8 +28,6 @@
                             <th>Apellidos</th>
                             <th>genero</th>
                             <th>Tipo de Doc</th>
-                            
-                            <th>Foto</th>
                             <th>F. creacion</th>
                             <th>Opciones</th>
                         </tr>
@@ -43,11 +41,6 @@
                                 <td>{{ $gen[ $instructor->genero ] }}</td>
                                 <td>{{ $doc[ $instructor->tipoDoc ] }}</td>
                                 <td>{{ $instructor->created_at }}</td>
-                                
-                                
-                                <td>  <img src="{{public_path("img/user/").$instructor->foto}}" alt="">
-                                <img src="{{'D:/Laravel/sena/public/img/user/us03.jpg'}}" alt="">
-                                </td>
                                 <td>
                                     <form action="{{ route('instructor.destroy',$instructor->id_instructor) }}" method="post">
                                         @csrf
