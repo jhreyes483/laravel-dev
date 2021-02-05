@@ -16,7 +16,7 @@ class CreateProgramaTable extends Migration
         Schema::create('programa', function (Blueprint $table) {
             $table->id('id_prog');
             $table->string('nomProg', '200');
-            $table->string('acronimo','4');
+            $table->string('acronimo','20');
             $table->string('estado','2');
             $table->timestamps();
         });

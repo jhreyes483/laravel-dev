@@ -52,7 +52,6 @@ class ProgramaController extends Controller
     }
     */
 
-    
 
     public function edit($id_prog){
         $est =  $this->est;
@@ -63,11 +62,11 @@ class ProgramaController extends Controller
     public function update(Request $request, $id_prog){
         $datosexception = request()->except(['_token', '_method']);
         Programa::where('id_prog', '=', $id_prog)->update($datosexception);
-        return redirect()->route('admin.show',$id_prog)->with([
+        return redirect()->route('programa.show',$id_prog)->with([
             'message'=>'Se a actualizado correctmente el usuario',
             'type'=>'info'
         ]);
-    } 
+    }
 
     public function show($id_prog){
         $est =  $this->est;
