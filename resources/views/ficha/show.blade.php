@@ -18,7 +18,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
 
-        
+
     <!-- sidebar -->
 @include('layouts.admin.components.sidebar')
 
@@ -33,66 +33,74 @@
 
     <!-- Main content -->
     <section class="content">
-
-        <h3 style="padding: 15px; background-color: #0d6aad; color: #ffffff; margin-bottom: 5%;">BIENVENIDO - {{ session('USER')->name_user }} </h3>
-
+        @include('layouts.admin.components.session')
 
 
 
 
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-11 mx-auto">
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11 mx-auto">
 
 
 
 
 
-            <div class="table-responsive">
-                <table id="example" class="table table-striped" >
-                  
-                    <tbody class="table-light">
-                        <tr>
-                            <th class="bg-primary text-white" >Numero de ficha</th>
-                            <td>{{  $ficha->No_ficha  }}</td>
-                        </tr>
-                        <tr>
-                            <th class="bg-primary text-white">Descripcion</th>
-                            <td>{{ $ficha->descrip }}</td>
-                        </tr>
-                        <tr>
-                            <th class="bg-primary text-white">Estado</th>
-                            <td>{{ $est[$ficha->estado] }}</td>
-                        </tr>
-                        <tr>
-                            <th class="bg-primary text-white">jornada</th>
-                            <td>{{ $ficha->jornada['nom_jornada'] }}</td>
-                        </tr>
-                        <tr>
-                            <th class="bg-primary text-white">Programa</th>
-                            <td>{{ $ficha->programa['nomProg'] }}</td>
-                        </tr>
-                        <tr>
-                            <th class="bg-primary text-white">Aprendiz</th>
-                            <td>{{ $ficha->aprendiz['nom1'] }}</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
+                    <div class="table-responsive">
+                        <table id="example" class="table table-striped" >
+
+                            <tbody class="table-light">
+                            <tr>
+                                <th class="bg-primary text-white" >ID</th>
+                                <td>{{  $ficha->id_ficha  }}</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-primary text-white">No. Ficha</th>
+                                <td>{{ $ficha->No_ficha }}</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-primary text-white">Descripcion</th>
+                                <td>{{ $ficha->descrip }}</td>
+                            </tr>
+
+                            <tr>
+                                <th class="bg-primary text-white">Estado</th>
+                                <td>{{ $est[ $ficha->estado ] }}</td>
+                            </tr>
+
+                            <tr>
+                                <th class="bg-primary text-white">Jornada</th>
+                                <td>{{ $ficha->jornada->nom_jornada }}</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-primary text-white">Nombre Programa</th>
+                                <td>{{ $ficha->programa->nomProg }}</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-primary text-white">Fecha de Creacion</th>
+                                <td>{{ $ficha->created_at }}</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <a class="btn btn-primary" href="{{route('programa.index')}}" style="margin-top: 20px;">Volver a programa</a>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
     </section>
-</div>
+  </div>
 
     <!-- footer -->
     @include('layouts.admin.components.footer')
 </div>
-    
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -127,7 +135,7 @@
                   scrollY: 400,
                   lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
     });
-} 
+}
 );
 </script>
 
@@ -137,4 +145,3 @@
 </html>
 
 
-   
