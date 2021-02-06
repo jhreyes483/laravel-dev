@@ -30,7 +30,7 @@
                                 <li><!-- start message -->
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="https://userscontent2.emaze.com/images/d8ea2c1c-955c-41f6-8040-9f625d605e46/b4c964abd7ae7cfd8ce8b44d907b40a4.png" class="img-circle" alt="User Image">
+                                            <img src="https://laflorestadecomala.com/wp-content/uploads/2020/04/136-1366211_group-of-10-guys-login-user-icon-png.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             Support Team

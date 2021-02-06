@@ -18,7 +18,12 @@ function horaActual() {
       if(hora > 12) {
          hora = hora - 12;
          sufijo = ' pm';
+    
       }
+
+      if(hora >= 12){
+        sufijo = ' pm';
+     }
 
       reloj = +" "+hora+": "+minuto+": "+segundo + sufijo;	
       return reloj; 
