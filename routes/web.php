@@ -23,7 +23,8 @@ use App\Http\Controllers\ProgramaController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return Route::get('login',[LoginController::class,'form_login'])->name('login.form_login');
+  //  return view('login');
 });
 
 Route::get('escritorio',[DashboardController::class,'index'])->name('dashboard.index');
