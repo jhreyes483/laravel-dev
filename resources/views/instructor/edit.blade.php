@@ -39,8 +39,12 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="name_user">Estados:</label>
-                        <input name="estado" id="estado" type="text" class="form-control" value="{{$instructor->estado}}">
+                        <label for="password">Estado:</label>
+                        <select name="Estado" id="Estado">
+                            @foreach ($est  as  $i => $d)
+                                <option  {{ (( $i == $instructor->estado )? 'selected ': '') }}  value="{{ $i }}">{{ $d }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="form-group">

@@ -59,7 +59,7 @@ Route::get('aprendiz/create',[AprendizController::class,'create'])->name('aprend
 Route::post('aprendiz',[AprendizController::class,'store'])->name('aprendiz.store');
 Route::delete('aprendiz/{id}',[AprendizController::class,'destroy'])->name('aprendiz.destroy'); 
 Route::get('aprendiz/edit/{id}',[AprendizController::class,'edit'])->name('aprendiz.edit');
-Route::put('aprendiz/update/{id}',[AprendizController::class,'update'])->name('aprendiz.update');
+Route::put('apr@endiz/update/{id}',[AprendizController::class,'update'])->name('aprendiz.update');
 Route::get('aprendiz/{id}',[AprendizController::class,'show'])->name('aprendiz.show'); 
 Route::get('aprendiz/confirm/{id}',[AprendizController::class,'confirm'] )->name('aprendiz.confirm');
 

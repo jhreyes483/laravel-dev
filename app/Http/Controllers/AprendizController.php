@@ -68,9 +68,10 @@ class AprendizController extends Controller
     public function edit($id_aprendiz){
         $doc =  $this->doc;
         $gen =  $this->gen;
+        $est = $this->est;
         $fichas = Ficha::all();
         $aprendiz = Aprendiz::findOrFail($id_aprendiz);
-        return view('aprendiz.edit', compact('aprendiz', 'doc', 'gen', 'fichas'));
+        return view('aprendiz.edit', compact('aprendiz', 'doc', 'gen', 'fichas','est'));
     }
 
     public function update(Request $request, $id_aprendiz){

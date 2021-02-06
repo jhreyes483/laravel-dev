@@ -62,8 +62,9 @@ class AdminController extends Controller
     public function edit($id_admin){
         $doc =  $this->doc;
         $gen =  $this->gen;
+        $est =  $this->est;
         $usuario = Admin::findOrFail($id_admin);
-        return view('admin.edit', compact('usuario', 'doc', 'gen'));
+        return view('admin.edit', compact('usuario', 'doc', 'gen','est'));
     }
 
     public function update(Request $request, $id_admin){

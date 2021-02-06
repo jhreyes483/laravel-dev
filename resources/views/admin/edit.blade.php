@@ -39,8 +39,12 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="name_user">Estados:</label>
-                        <input name="estado" id="estado" type="text" class="form-control" value="{{$usuario->estado}}">
+                        <label for="password">Estado:</label>
+                        <select name="Estado" id="Estado">
+                            @foreach ($gen  as  $i => $d)
+                                <option  {{ (( $i == $usuario->genero )? 'selected ': '') }}  value="{{ $i }}">{{ $d }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="form-group">
@@ -61,8 +65,9 @@
 
                     <div class="form-group">
                         <label for="password">Foto:</label>
-                        <input name="foto" id="foto" type="text" class="form-control" value="{{$usuario->foto}}">
+                        <input name="foto" id="foto" type="file" class="form-control" value="{{$usuario->foto}}">
                     </div>
+
 
                     <div class="form-group">
                         <label for="password">Password:</label>

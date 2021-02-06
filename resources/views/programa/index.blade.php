@@ -43,17 +43,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto">
-
-
-
-
-
                 <div class="table-responsive">
                     <table id="example" class="table table-striped">
                         <thead class="table-dark">
                         <tr>
                             <th>ID</th>
-                            <th>nomProg</th>
+                            <th>Programa</th>
                             <th>acronimo</th>
                             <th>estado</th>
                             <th>Fecha</th>

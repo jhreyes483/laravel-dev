@@ -39,8 +39,12 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="name_user">Estados:</label>
-                        <input name="estado" id="estado" type="text" class="form-control" value="{{$aprendiz->estado}}">
+                        <label for="password">Estado:</label>
+                        <select name="Estado" id="Estado">
+                            @foreach ($est  as  $i => $d)
+                                <option  {{ (( $i == $aprendiz->estado )? 'selected ': '') }}  value="{{ $i }}">{{ $d }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="form-group">
@@ -80,8 +84,6 @@
                             @foreach ($doc  as  $i => $d)
                                 <option {{ (( $i == $aprendiz->tipoDoc)? 'selected ': '') }}  value="{{ $i }}">{{ $d }}</option>
                             @endforeach
-                           
-                        
                         </select>
                     </div>
 

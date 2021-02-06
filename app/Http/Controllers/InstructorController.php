@@ -58,10 +58,11 @@ class InstructorController extends Controller
     } 
 
     public function edit($id_admin){
+        $est =  $this->est;
         $doc =  $this->doc;
         $gen =  $this->gen;
         $instructor = Instructor::findOrFail($id_admin);
-        return view('instructor.edit', compact('instructor', 'doc', 'gen'));
+        return view('instructor.edit', compact('instructor', 'doc', 'gen','est'));
     }
 
     public function update(Request $request, $id_instructor){
