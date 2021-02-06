@@ -30,7 +30,7 @@
                             <th>Tipo de Doc</th>
                             <th>Foto</th>
                             <th>F. creacion</th>
-                            <th>Opciones</th>
+                            <th>Opciones de edición</th>
                         </tr>
                         </thead>
                         <tbody class="table-light">
@@ -51,11 +51,9 @@
                                     <form action="{{ route('instructor.destroy',$instructor->id_instructor) }}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{ route('instructor.edit',$instructor->id_instructor) }}" class="btn btn-sm btn-warning">Editar</a>
-                                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-
-                                        <a href="{{ route('instructor.show',$instructor->id_instructor) }}" class="btn btn-sm btn-info">Detalles</a>
-
+                                        <a href="{{ route('instructor.edit',$instructor->id_instructor) }}" class="btn btn-sm btn-warning" title="Editar"><i class="fas fa-eye-dropper"></i></a>
+                                        <button type="submit" class="btn btn-sm btn-danger" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
+                                        <a href="{{ route('instructor.show',$instructor->id_instructor) }}" class="btn btn-sm btn-info" title="Detalle" ><i class="far fa-eye"></i></a>
                                     </form>
                                 </td>
                             </tr>

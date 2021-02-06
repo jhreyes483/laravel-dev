@@ -100,7 +100,8 @@ $mJornada = (isset($_GET['jornada']) ? '-- <i class="far fa-comment-alt"></i> --
                                             <th>Descripcion</th>
                                             <th>Estado</th>
                                             <th>Jornada</th>
-                                            <th>Programa</th>
+                                            <th  >Programa</th>
+                                            <th  >Accion de registro</th>
 
                                             <th></th>
                                         </tr>
@@ -113,21 +114,13 @@ $mJornada = (isset($_GET['jornada']) ? '-- <i class="far fa-comment-alt"></i> --
                                             <td>{{ $est[$ficha->estado] }}</td>
                                             <td>{{ $ficha->jornada['nom_jornada'] }}</td>
                                             <td>{{ $ficha->programa['nomProg'] }}</td>
-
                                             <td>
                                                 <form action="" method="post">
-
-
-                                                    <a href="{{ route('ficha.confirm',$ficha->id_ficha) }}" class="btn btn-sm btn-success" style="margin-bottom: 10px;">Actualizar estado</a>
-
-                                                    <a href="{{ route('ficha.edit',$ficha->id_ficha) }}" class="btn btn-sm btn-primary">Editar</a>
-
-                                                    <a href="{{ route('ficha.show',$ficha->id_ficha) }}" class="btn btn-sm btn-info">Detalles</a>
-
+                                                    <a href="{{ route('ficha.confirm',$ficha->id_ficha) }}" class="btn btn-sm btn-success" title="Actualizar estado"><i class="fas fa-clipboard-list"></i></a>
+                                                    <a href="{{ route('ficha.edit',$ficha->id_ficha) }}" class="btn btn-sm btn-primary" title="Editar"><i class="fas fa-eye-dropper"></i></a>
+                                                    <a href="{{ route('ficha.show',$ficha->id_ficha) }}" class="btn btn-sm btn-info" title="Detalle" ><i class="far fa-eye"></i></a>
                                                 </form>
                                             </td>
-
-
                                         </tr>
                                         @endforeach
                                     </tbody>

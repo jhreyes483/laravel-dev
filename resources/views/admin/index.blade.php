@@ -35,11 +35,9 @@
                                     <form action="{{ route('admin.destroy',$usuario->id_admin) }}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{ route('admin.edit',$usuario->id_admin) }}" class="btn btn-sm btn-warning">Editar</a>
-                                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-
-                                        <a href="{{ route('admin.show',$usuario->id_admin) }}" class="btn btn-sm btn-info">Detalles</a>
-
+                                        <a href="{{ route('admin.edit',$usuario->id_admin) }}" class="btn btn-sm btn-warning" title="Editar"><i class="fas fa-eye-dropper"></i></a>
+                                        <button type="submit" class="btn btn-sm btn-danger" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
+                                        <a href="{{ route('admin.show',$usuario->id_admin) }}" class="btn btn-sm btn-info"title="Detalle" ><i class="far fa-eye"></i></a>
                                     </form>
                                 </td>
                             </tr>

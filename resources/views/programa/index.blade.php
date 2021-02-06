@@ -65,12 +65,8 @@
                                 <td>{{ $programa->created_at }}</td>
                                 <td>
                                     <form action="" method="post">
-
-                                        <a href="{{ route('programa.edit',$programa->id_prog) }}" class="btn btn-sm btn-warning">Editar</a>
-
-
-                                        <a href="{{ route('programa.show',$programa->id_prog) }}" class="btn btn-sm btn-info">Detalles</a>
-
+                                        <a href="{{ route('programa.edit',$programa->id_prog) }}" class="btn btn-sm btn-warning" title="Editar"><i class="fas fa-eye-dropper"></i></a>
+                                        <a href="{{ route('programa.show',$programa->id_prog) }}" class="btn btn-sm btn-info" title="Detalle" ><i class="far fa-eye"></i></a>
                                     </form>
                                 </td>
                             </tr>

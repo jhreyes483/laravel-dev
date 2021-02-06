@@ -6,7 +6,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-10 mx-auto">
+            <div class="col-md-12 mx-auto">
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead class="table-dark">
@@ -21,7 +21,7 @@
                             <th>Ficha</th>
                  
                             <th>Foto</th>
-                            <th>Opciones</th>
+                            <th>Opciones de edicion</th>
                        
 
                         </tr>
@@ -40,12 +40,9 @@
                                 <td>  <img width="100" src="img/user/{{ $aprendiz->foto }}" alt=""> </td>
                                 <td>
                                     <form action="" method="post">
-                                       
-                                        <a href="{{ route('aprendiz.edit',$aprendiz->id_aprendiz) }}" class="btn btn-sm btn-warning">Editar</a>
-                                        <a href="{{ route('aprendiz.confirm',$aprendiz->id_aprendiz) }}" class="btn btn-sm btn-warning">Eliminar</a>
-
-                                        <a href="{{ route('aprendiz.show',$aprendiz->id_aprendiz) }}" class="btn btn-sm btn-info">Detalles</a>
-
+                                        <a href="{{ route('aprendiz.edit',$aprendiz->id_aprendiz) }}" class="btn btn-sm btn-warning" title="Editar"><i class="fas fa-eye-dropper"></i></a>
+                                        <a href="{{ route('aprendiz.confirm',$aprendiz->id_aprendiz) }}" class="btn btn-sm btn-danger" title="Eliminar"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="{{ route('aprendiz.show',$aprendiz->id_aprendiz) }}" class="btn btn-sm btn-info" title="Detalle" ><i class="far fa-eye"></i></a>
                                     </form>
                                 </td>
                             </tr>
