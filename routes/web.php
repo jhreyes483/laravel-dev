@@ -23,7 +23,7 @@ use App\Http\Controllers\ProgramaController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('modules.auth.form_login');
 });
 
 Route::get('escritorio',[DashboardController::class,'index'])->name('dashboard.index');
