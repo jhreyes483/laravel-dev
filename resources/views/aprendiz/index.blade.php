@@ -24,7 +24,7 @@
                         </tr>
                         </thead>
                         <tbody class="table-light">
-                        @foreach($aprendiz as $aprendiz)
+                            @foreach($aprendiz as $aprendiz)
                             <tr>
                                 <td>{{ $aprendiz->id_aprendiz }}</td>
                                 <td>{{ $aprendiz->nom1.' '.$aprendiz->nom2 }}</td>

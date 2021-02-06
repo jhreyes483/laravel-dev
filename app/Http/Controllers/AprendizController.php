@@ -56,8 +56,7 @@ class AprendizController extends Controller
     }
 
     
-    public function destroy($id_aprendiz)
-    {
+    public function destroy($id_aprendiz){
         Aprendiz::find($id_aprendiz)->delete();
         return redirect()->route('aprendiz.index')->with([
             'message'=>'se ha eliminado correctamente',
@@ -81,8 +80,6 @@ class AprendizController extends Controller
             'type'=>'info'
         ]);
     } 
-    
-
 
     public function show($id_aprendiz){
         $doc =  $this->doc;
