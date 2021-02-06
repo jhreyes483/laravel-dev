@@ -9,9 +9,7 @@ use App\Models\Programa;
 use App\Models\Aprendiz;
 class FichaController extends Controller
 
-
 {
-
     public function __construct(){
         parent::__construct();
     }

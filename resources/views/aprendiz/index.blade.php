@@ -16,8 +16,11 @@
                             <th>Apellidos</th>
                             <th>genero</th>
                             <th>Tipo de Doc</th>
+                            <th>Documento</th>
                             <th>F. creacion</th>
                             <th>Ficha</th>
+                 
+                            <th>Foto</th>
                             <th>Opciones</th>
                        
 
@@ -31,10 +34,10 @@
                                 <td>{{ $aprendiz->ape1.' '.$aprendiz->ape2 }}</td>
                                 <td>{{ $gen[ $aprendiz->genero ] }}</td>
                                 <td>{{ $doc[ $aprendiz->tipoDoc ] }}</td>
-                                <td>{{ $doc[ $aprendiz->tipoDoc ] }}</td>
-                                <td>{{ $aprendiz->fichas['id_ficha'] }}</td>
+                                <td>{{ $aprendiz->id_aprendiz }}</td>
+                                <td>{{ $aprendiz->fichas['No_ficha']}}</td>
                                 <td>{{ $aprendiz->created_at }}</td>
-                                <td>{{ $aprendiz->created_at }}</td>
+                                <td>  <img width="100" src="img/user/{{ $aprendiz->foto }}" alt=""> </td>
                                 <td>
                                     <form action="" method="post">
                                        

@@ -28,12 +28,17 @@
                             <th>Apellidos</th>
                             <th>genero</th>
                             <th>Tipo de Doc</th>
+                            <th>Foto</th>
                             <th>F. creacion</th>
                             <th>Opciones</th>
                         </tr>
                         </thead>
                         <tbody class="table-light">
                         @foreach($instructor as $instructor)
+<?php
+ $foto = ($instructor->foto??'user.jpg');
+?>
+
                             <tr>
                                 <td>{{ $instructor->id_instructor }}</td>
                                 <td>{{ $instructor->nom1.' '.$instructor->nom2 }}</td>
@@ -41,6 +46,7 @@
                                 <td>{{ $gen[ $instructor->genero ] }}</td>
                                 <td>{{ $doc[ $instructor->tipoDoc ] }}</td>
                                 <td>{{ $instructor->created_at }}</td>
+                                <td>  <img width="80" height="100" class="img-profile ml-3 rounded-circle" src="img/user/{{   $foto }}" alt=""> </td>
                                 <td>
                                     <form action="{{ route('instructor.destroy',$instructor->id_instructor) }}" method="post">
                                         @csrf

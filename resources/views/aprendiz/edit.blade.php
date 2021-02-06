@@ -4,13 +4,21 @@
 
     <div class="container mt-5">
         <div class="row">
+
+
+
+
             <div class="col-md-8 card card-body shadow p-3 mb-5 bg-white rounded mx-auto">
+
+             
+
                 <form action="{{ route('aprendiz.update',$aprendiz->id_aprendiz) }}" method="post">
 
                      @csrf
                     {{method_field('PUT')}}
 
                     <h3 class="mb-5">Editar aprendiz</h3>
+
 
                     <div class="form-group">
                         <label for="name_user">Identificacion:</label>
@@ -71,12 +79,7 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="password">Foto:</label>
-                        <input name="foto" id="foto" type="text" class="form-control" value="{{$aprendiz->foto}}">
-                    </div>
-
-
+ 
 
                     <div class="form-group">
                         <label for="password">Tipo de documento:</label>
