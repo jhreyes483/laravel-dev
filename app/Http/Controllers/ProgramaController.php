@@ -71,6 +71,9 @@ class ProgramaController extends Controller
         ]);
     }
 
+
+
+
     public function show($id_prog){
         $est =  $this->est;
         $programa = Programa::find($id_prog);
