@@ -8,7 +8,7 @@
                 <form action="{{ route('aprendiz.update',$aprendiz->id_aprendiz) }}" method="post">
 
                      @csrf
-                    {{method_field('PATCH')}}
+                    {{method_field('PUT')}}
 
                     <h3 class="mb-5">Editar aprendiz</h3>
 
