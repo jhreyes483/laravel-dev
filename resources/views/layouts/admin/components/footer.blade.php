@@ -1,6 +1,6 @@
 <footer class="main-footer">
 
-    <strong>Copyright &copy; 2020 <a href="https://adminlte.io">Transporte ACME</a>.</strong> All rights
+    <strong>Copyright &copy; 2020 <a href="https://adminlte.io">Sena</a>.</strong> {{date('Y-m-d' )}}
     reserved.
 </footer>
 
