@@ -1,7 +1,47 @@
-<footer class="main-footer">
+<script>
 
-    <strong>Copyright &copy; 2020 <a href="https://adminlte.io">Sena</a>.</strong> {{date('Y-m-d' )}}
-    reserved.
+function horaActual() {
+      fecha=new Date(); //Actualizar fecha.
+      hora=fecha.getHours(); //hora actual
+      minuto=fecha.getMinutes(); //minuto actual
+      segundo=fecha.getSeconds(); //segundo actual
+      if (hora<=10) { //dos cifras para la hora
+         hora=hora;
+      }
+      if (minuto<10) { //dos cifras para el minuto
+         minuto="0"+minuto;
+      }
+      if (segundo<10) { //dos cifras para el segundo
+         segundo="0"+segundo;
+      }
+      var sufijo = ' am';
+      if(hora > 12) {
+         hora = hora - 12;
+         sufijo = ' pm';
+      }
+
+      reloj = +" "+hora+": "+minuto+": "+segundo + sufijo;	
+      return reloj; 
+   }
+      
+   function actualizar() { //función del temporizador
+      hora=horaActual(); //recoger hora actual
+      reloj=document.getElementById("reloj"); //buscar elemento reloj
+      reloj.innerHTML=hora; //incluir hora en elemento
+   }
+   setInterval(actualizar,1000); //iniciar temporizador
+
+
+</script>
+
+<footer class="main-footer">
+<div class="row">
+    <div class="col-md-12"> 
+    <strong>Copyright &copy;{{date('Y-m-d' )}}  Sena. 
+        <span  id="reloj"class="text-dark" ></span>
+Todos los derechos reservados.</strong>
+</div>
+</div>
 </footer>
 
 <script
