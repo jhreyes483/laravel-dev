@@ -18,15 +18,10 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-
-
         <!-- sidebar -->
         @include('layouts.admin.components.sidebar')
-
         <!-- navbarbar -->
         @include('layouts.admin.components.navbar')
-
-
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -37,15 +32,11 @@
                     <div class="col-md-3">
                         <a href="#" class="toggle btn btn-primary form-control"  style="margin-left: 3%; margin-bottom: 2%;">Filtros</a>
                     </div>
-
-
-
-
              </div>
                 <div class="row">
                 <div class=" container" style=" margin-bottom: 3%; margin-top: 2%;">
                     <div class="row my-2 form" style="display:none"   >
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <form action="">
                                 <label for="estado">Estado</label>
                                 <select name="estado" id="estado" onchange="submit(this)">
@@ -57,7 +48,7 @@
                                 </select>
                             </form>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <form action="">
                                 <label for="jornada">Jornada</label>
                                 <select name="jornada" id="jornada" onchange="submit(this)">
@@ -69,13 +60,15 @@
                                 </select>
                             </form>
                         </div>
-                        <div class="col-md-4"></div>
+@if( isset($_GET['estado'])  || isset($_GET['jornada'])  )
+                        <div class="col-md-2">
+                            <label >General</label>
+                            <a id="todos" href="{{ route('ficha.index') }}" class="btn btn-sm btn-primary form-control" title="todos">Todas las fichas</a>
+                        </div>
+@endif
                     </div>
                 </div>
-
             </div>
-
-
             @if( isset( $_GET['estado'] ))
             <div class="row">                
                 <div class="col-md-12 mx-auto">
@@ -83,9 +76,7 @@
                 <h1>Filtro por estado {{ $est[$_GET['estado']] }} </h1>
                 </div>
              </div>
-             @endif
-
-             
+             @endif             
             @if( isset( $_GET['jornada'] ))
             <div class="row">                
                 <div class="col-md-12 mx-auto">
@@ -94,17 +85,9 @@
                 </div>
              </div>
              @endif
-             
-
-
                 <div class="container">
                     <div class="row">
                         <div class="col-md-11 mx-auto">
-
-
-
-
-
                             <div class="table-responsive">
                                 <table id="example" class="table table-striped">
                                     <thead class="table-dark">
@@ -140,7 +123,6 @@
                         </div>
                     </div>
                 </div>
-
             </section>
         </div>
 
@@ -188,13 +170,14 @@
     });
 
 
-
-
-
-
+$(document).ready(function() {
+    var elemento = $(".form");
+    var mostrar  = $(".toggle");
+  mostrar.click(function() {
+    elemento.toggle(1000);
+  });
+});
 </script>
-
 <script src="https://adminlte.io/themes/AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="https://adminlte.io/themes/AdminLTE/dist/js/adminlte.min.js"></script>
-
 </html>
