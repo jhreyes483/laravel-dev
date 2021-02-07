@@ -20,15 +20,18 @@ class FichaController extends Controller
        // $ficha=Ficha::all();
        // $est = $this->est;
        // return view('ficha.index',compact('ficha', 'est'));  si   ahora la foto jajajaj tienen el codigo por ahi ?
+        $jornada = Jornada::all();
+        foreach( $jornada as $d  ){
+            $jorn[$d->id] = $d->nom_jornada;
+        }
 
         if( isset($rEstado) ){
             $doc = $this->doc;
             $gen = $this->gen;
             $est =  $this->est;
-            $jornada = Jornada::all();
             $caracter  = $request->get('caracter');
             $ficha     = Ficha::where('estado',"$rEstado")->get();
-            return view('ficha.index',compact('ficha', 'doc', 'gen', 'est','jornada'));
+            return view('ficha.index',compact('ficha', 'doc', 'gen', 'est','jornada','jorn'));
         }elseif( isset($rJornada) ){
             $doc = $this->doc;
             $gen = $this->gen;
@@ -36,17 +39,15 @@ class FichaController extends Controller
             $jornada = Jornada::all();
             $caracter  = $request->get('caracter');
             $ficha   = Ficha::where('FK_jornada',"$rJornada")->get();
-            return view('ficha.index',compact('ficha', 'doc', 'gen', 'est','jornada'));
+            return view('ficha.index',compact('ficha', 'doc', 'gen', 'est','jornada','jorn'));
         }else{
             $doc = $this->doc;
             $gen = $this->gen;
             $est =  $this->est;
             $ficha   =  Ficha::all();
             $jornada = Jornada::all();
-            return view('ficha.index',compact('ficha', 'doc', 'gen', 'est', 'jornada'));
+            return view('ficha.index',compact('ficha', 'doc', 'gen', 'est', 'jornada', 'jorn'));
         }
-        
-
     }    
 
     //GET

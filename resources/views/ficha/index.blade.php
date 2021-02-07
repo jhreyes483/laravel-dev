@@ -37,15 +37,7 @@
                     <div class="col-md-3">
                         <a href="#" class="toggle btn btn-primary form-control"  style="margin-left: 3%; margin-bottom: 2%;">Filtros</a>
                     </div>
-<div class="row">                
-<div class="col-md-12 mx-auto">
-<?php 
-$mEstado =  (isset($_GET['estado']) ? ' -- <i class="far fa-comment-alt"></i> ---> Filtro por estado '.$est[$_GET['estado']]  :'');
-$mJornada = (isset($_GET['jornada']) ? '-- <i class="far fa-comment-alt"></i> ---> Filto por jornada '. $jornada[$_GET['jornada']]->nom_jornada : '');
-?>
-<br><br> <?='    '.$mEstado .'  '.$mJornada?>
-</div>
-</div>
+
 
 
 
@@ -57,7 +49,7 @@ $mJornada = (isset($_GET['jornada']) ? '-- <i class="far fa-comment-alt"></i> --
                             <form action="">
                                 <label for="estado">Estado</label>
                                 <select name="estado" id="estado" onchange="submit(this)">
-                                    <option value="0,1">Seleccione</option>
+                                    <option value="1">Seleccione</option>
                                     @foreach($est as $i => $e )
                                     <?php  $get = ( $_GET['estado']?? '' )   ?>
                                     <option <?=    ( ( $get == $i )?  'selected ' : '' ) ?> value="{{ $i }}">{{ $e }}</option>
@@ -69,10 +61,10 @@ $mJornada = (isset($_GET['jornada']) ? '-- <i class="far fa-comment-alt"></i> --
                             <form action="">
                                 <label for="jornada">Jornada</label>
                                 <select name="jornada" id="jornada" onchange="submit(this)">
-                                    <option value="0,1">Seleccione</option>
-                                    @foreach($jornada as $i => $j ) 
+                                    <option value="1">Seleccione</option>
+                                    @foreach($jorn as $i => $j ) 
                                     <?php  $get = ( $_GET['jornada']?? '' )   ?>
-                                    <option <?=    ( ( $get == $i )?  'selected ' : '' ) ?>   value="{{ $j->id }}">{{ $j->nom_jornada }}</option>
+                                    <option <?=    ( ( $get == $i )?  'selected ' : '' ) ?>   value="{{ $i }}">{{ $j }}</option>
                                     @endforeach
                                 </select>
                             </form>
@@ -82,6 +74,27 @@ $mJornada = (isset($_GET['jornada']) ? '-- <i class="far fa-comment-alt"></i> --
                 </div>
 
             </div>
+
+
+            @if( isset( $_GET['estado'] ))
+            <div class="row">                
+                <div class="col-md-12 mx-auto">
+                 <div class="container py-5">
+                <h1>Filtro por etado {{ $est[$_GET['estado']] }} </h1>
+                </div>
+             </div>
+             @endif
+
+             
+            @if( isset( $_GET['jornada'] ))
+            <div class="row">                
+                <div class="col-md-12 mx-auto">
+                 <div class="container py-5">
+                <h1>Filtro por jornada {{ $jorn[$_GET['jornada']] }} </h1>
+                </div>
+             </div>
+             @endif
+             
 
 
                 <div class="container">

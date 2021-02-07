@@ -20,6 +20,7 @@ class AprendizController extends Controller
         $doc = $this->doc;
         $gen = $this->gen;
         $est =  $this->est;
+ 
         return view('aprendiz.index',compact('aprendiz', 'doc', 'gen', 'est'));
     }
 
