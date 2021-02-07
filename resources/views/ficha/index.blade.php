@@ -115,8 +115,6 @@
                                             <th>Jornada</th>
                                             <th  >Programa</th>
                                             <th  >Accion de registro</th>
-
-                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody class="table-light">
@@ -190,13 +188,7 @@
     });
 
 
-$(document).ready(function() {
-    var elemento = $(".form");
-    var mostrar  = $(".toggle");
-  mostrar.click(function() {
-    elemento.toggle(1000);
-  });
-});
+
 
 
 
