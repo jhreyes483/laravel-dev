@@ -17,8 +17,8 @@
                             <th>genero</th>
                             <th>Tipo de Doc</th>
                             <th>Documento</th>
-                            <th>F. creacion</th>
                             <th>Ficha</th>
+                            <th>F. creacion</th>
                  
                             <th>Foto</th>
                             <th>Opciones de edicion</th>

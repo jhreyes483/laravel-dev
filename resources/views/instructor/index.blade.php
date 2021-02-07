@@ -28,8 +28,8 @@
                             <th>Apellidos</th>
                             <th>genero</th>
                             <th>Tipo de Doc</th>
+                            <th>F. Creación</th>
                             <th>Foto</th>
-                            <th>F. creacion</th>
                             <th>Opciones de edición</th>
                         </tr>
                         </thead>
