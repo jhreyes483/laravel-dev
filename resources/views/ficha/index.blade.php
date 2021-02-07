@@ -80,7 +80,7 @@
             <div class="row">                
                 <div class="col-md-12 mx-auto">
                  <div class="container py-5">
-                <h1>Filtro por etado {{ $est[$_GET['estado']] }} </h1>
+                <h1>Filtro por estado {{ $est[$_GET['estado']] }} </h1>
                 </div>
              </div>
              @endif
