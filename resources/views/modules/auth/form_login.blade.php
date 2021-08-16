@@ -24,10 +24,16 @@
                             <input type="submit" class="button" value="Iniciar Sesion">
                         </div>
                     </div>
+                    <a href="javascript:;" onclick="credenciales();">credenciales</a>
                 </form>
                 </div>
                 </div>
             </div>
         </div>
+        <script>
+             function credenciales(){
+      alert("admin  \n Documento: 1 \n Contraseña: 1 ");
+    }
+        </script>
 
 @endsection
