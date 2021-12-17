@@ -1,4 +1,4 @@
-@extends('layouts.auth.app')
+ @extends('layouts.auth.app')
 @section('content')
 
 
@@ -32,8 +32,8 @@
         </div>
         <script>
              function credenciales(){
-      alert("admin  \n Documento: 1 \n Contraseña: 1 ");
-    }
+                alert("admin  \n Documento: 1 \n Contraseï¿½a: 1 ");
+            }
         </script>
 
 @endsection
