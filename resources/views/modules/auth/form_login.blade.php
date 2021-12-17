@@ -1,6 +1,5 @@
  @extends('layouts.auth.app')
 @section('content')
-
 <div class="login-wrap" style="margin-top: 1%; margin-bottom: 1%;">
             <div class="login-html ">
                 <input id="tab-1" type="radio" name="tab" class="sign-in" checked=""><label for="tab-1" class="tab">Iniciar Sesion</label>
@@ -37,5 +36,4 @@
                 alert("Developer: Javier Reyes Neira \n \n Proyecto desarrollado en Laravel \n  \n Credenciales \n  admin  \n Documento: 1 \n password: 1 ");
             }
         </script>
-
 @endsection
