@@ -25,7 +25,6 @@
                             <a href="javascript:;" onclick="credenciales();">Credenciales publicas click</a>
                         </div>
                     </div>
-
                 </form>
                 </div>
                 </div>
