@@ -25,12 +25,12 @@
                             <a href="javascript:;" onclick="credenciales();">Credenciales publicas click</a>
                         </div>
                     </div>
-  
+
                 </form>
                 </div>
                 </div>
         </div>
-        
+
         <script>
             function credenciales(){
                 alert("Developer: Javier Reyes Neira \n \n Proyecto desarrollado en Laravel \n  \n Credenciales \n  admin  \n Documento: 1 \n password: 1 ");
