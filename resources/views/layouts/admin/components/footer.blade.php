@@ -29,7 +29,7 @@ function horaActual() {
       return reloj; 
    }
       
-   function actualizar() { //función del temporizador
+   function actualizar() { //funciï¿½n del temporizador
       hora=horaActual(); //recoger hora actual
       reloj=document.getElementById("reloj"); //buscar elemento reloj
       reloj.innerHTML=hora; //incluir hora en elemento
@@ -42,7 +42,7 @@ function horaActual() {
 <footer class="main-footer">
 <div class="row">
     <div class="col-md-12"> 
-    <strong>Copyright &copy;{{date('Y-m-d' )}}  Sena. 
+    <strong>Copyright &copy;{{date('Y-m-d' )}} Dev: J. R.
         <span  id="reloj"class="text-dark" ></span>
 Todos los derechos reservados.</strong>
 </div>

@@ -19,7 +19,7 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-            <li class="header">Navegacion</li>
+            <li class="header">Navegación</li>
 
 
 
@@ -39,21 +39,21 @@
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-edit"></i> <span>Instructor</span>
+                    <i class="fa fa-edit"></i> <span>Decano</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('instructor.create')}}"><i class="fa fa-circle-o"></i>Agregar Instructor</a></li>
-                    <li><a href="{{route('instructor.index')}}"><i class="fa fa-circle-o"></i>Modificar Instructor</a></li>
+                    <li><a href="{{route('instructor.create')}}"><i class="fa fa-circle-o"></i>Agregar Decano</a></li>
+                    <li><a href="{{route('instructor.index')}}"><i class="fa fa-circle-o"></i>Modificar Decano</a></li>
 
                 </ul>
             </li>
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-edit"></i> <span>Aprendiz</span>
+                    <i class="fa fa-edit"></i> <span>Alumno</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
